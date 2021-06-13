@@ -1,0 +1,12 @@
+npm install
+npx honkit build
+rm -Rf ../course-book
+mv _book ../course-book
+cd ../course-book
+
+git init
+git remote add origin https://github.com/mdonagh/mdonagh.github.io.git
+git add --all
+git commit -m "first commit"
+git push --set-upstream origin master -f
+cd ../course
