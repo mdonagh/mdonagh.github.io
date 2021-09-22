@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>402 · HonKit</title>
+        <title>403 · HonKit</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="HonKit 3.5.2">
@@ -57,9 +57,9 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="403.html" />
+    <link rel="next" href="404.html" />
 
-    <link rel="prev" href="401.html" />
+    <link rel="prev" href="402.html" />
     
 
     </head>
@@ -682,7 +682,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >402</a>
+        <a href=".." >403</a>
     </h1>
 </div>
 
@@ -697,21 +697,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="21">21</h1>
-<p>More about views</p>
+                                <h1 id="22">22</h1>
+<p>ASSIGNMENT</p>
+<p>time to PIMP your rails app! Twitter Bootstrap, when installed, offers a bunch of really nice-looking elements that make your website look 10x more professional with minimal work. There are also alternatives to boostrap you can google such as google materialize.</p>
+<p>Give your app a makeover by using as many styles from one of these CSS frameworks as you can.</p>
+<p>BONUS - create a second version of the same app that uses a different CSS framework so you can get a better feel for what these products offer.</p>
+<p>BACK TO FORMS</p>
+<p>Rails forms must have an authenticity token for security. These can be added as seen below.</p>
+<a href="https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token" target="_blank">https://stackoverflow.com/questions/941594/understanding-the-rails-authenticity-token</a>
+<pre><code>
+  &lt;form action="/patients/create" method="post"&gt;
+    <%= csrf_meta_tag %>
+    &lt;input type="text" name="name"&gt;
+    &lt;input type="submit"&gt;
+    &lt;/form&gt;
+</code></pre>
+<p>I'm a bit tired so double-check that submit button lol. But this is an HTML-style form in rails. It inserts the authenticity token.</p>
+<p>You can see the method - that can be GET (though that's uncommon/weird), DELETE, PUT, PATCH, or POST. These are HTTP verbs that correspond to what the form does.</p>
+<p>Unfortunately, it seems that many beginners struggle to understand how to use the Rails forms helpers which are commonly used. They're just annoying and counterintuitive and don't really build on HTML knowledge that much - Rails is guilty of having too much "Magic" happening under the hood. So use the form style above and once you can use that one then you can try to use the rails form helpers.</p>
 
-<p>partials</p>
-<p>A partial is a smaller view that can be reused between views. You past "locals" or local variables to it so that it knows what to do.</p>
-<pre><code><%= render 'form', post: @post %></code></pre>
-<p>views/layouts</p>
-<p>application.html.erb is rendered on every page in your Rails app. Layouts can also be used to share styles between different pages within a controller - look into it.</p>
-<p>SESSION VARIABLE</p>
-<p>This isn't really relevant to views, but I want you to use it on your next assignment. You can store information pertaining to the current user session in the session variable - google "rails session variable". session[:history]</p>
-<p>ASSIGNMENT - create a history bar in your rails monorepo</p>
-<p>Create a data structure in session that keeps track of the last 4 pages the user was on. Use application.html.erb, a session variable, AND a partial to display them at the top of each page. Link back to them, so the user can click on them to go back to their recent pages.</p>
-<p>I would think it would look like this</p>
-<pre><code>session[:history].push({url: "/patients/index", name: "Patients Index"}</code></pre>
-<p>But it can be whatever you want</p>
+
 
 
 
